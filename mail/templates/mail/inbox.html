@@ -1,0 +1,83 @@
+{% extends "mail/layout.html" %}
+{% load static %}
+{% block link %}
+    <link rel="stylesheet" href="{% static 'mail/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'mail/inbox.css' %}">
+    <link rel="stylesheet" href="{% static 'mail/background.css' %}">
+    <link rel="stylesheet" href="{% static 'mail/buttons.css' %}">
+{% endblock %}
+
+{% block body %}
+
+    <h2>{{ request.user.email }}</h2>
+
+        <button class="btn  from-top" id="inbox">Inbox</button>
+        <button class="btn from-top" id="compose">Compose</button>
+        <button class="btn from-top" id="sent">Sent</button>
+        <button class="btn from-top" id="archived">Archived</button>
+        <a class="btn from-top" href="{% url 'logout' %}">Log Out</a>
+        <hr>
+
+        
+        <div id="emails-view">
+            this is emails-view
+        </div>
+        
+        <div id="email-view">
+            this is email-view
+        </div>
+
+    <svg class="zig" xmlns="http://www.w3.org/2000/svg" id="SvgjsSvg1099" width="150" height="200" x="0" y="0" version="1.1" viewBox="0 0 402.85 402.851" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs"><path d="M97.158 402.851c.717 0 1.434-.275 1.984-.822l50.721-50.715a2.804 2.804 0 0 0 0-3.962l-46.721-46.718 48.767-48.769c1.086-1.084 1.086-2.867 0-3.961l-46.537-46.523 49.002-49.002a2.805 2.805 0 0 0 0-3.962l-46.715-46.72 48.767-48.766a2.807 2.807 0 0 0 0-3.962L108.276.821a2.799 2.799 0 0 0-3.961 0 2.804 2.804 0 0 0 0 3.961l46.167 46.165-48.739 48.736a2.808 2.808 0 0 0 0 3.961c.08.08.175.107.257.17.096.134.153.285.271.402l46.166 46.172L99.7 199.124c-.696.695-.898 1.653-.715 2.545a2.79 2.79 0 0 0 .808 2.041l46.167 46.183-48.739 48.723c-1.085 1.096-1.085 2.879 0 3.963.08.087.17.114.254.164.094.131.145.284.273.405l46.166 46.161-48.731 48.728c-1.092 1.095-1.092 2.884 0 3.962.533.586 1.258.852 1.975.852zm75.624 0a2.8 2.8 0 0 0 1.982-.822l50.718-50.715a2.822 2.822 0 0 0 0-3.962l-46.712-46.718 48.771-48.769c1.078-1.084 1.078-2.867 0-3.961L181 201.381l49.007-49.002a2.813 2.813 0 0 0 0-3.962l-46.715-46.714 48.769-48.767a2.802 2.802 0 0 0 0-3.961L183.908.832a2.8 2.8 0 1 0-3.961 3.961l46.165 46.165-48.731 48.737a2.804 2.804 0 0 0 0 3.961c.074.074.161.101.246.164.096.134.146.29.274.408l46.171 46.173-48.735 48.736c-.689.69-.892 1.643-.713 2.534a2.806 2.806 0 0 0 .806 2.06l46.184 46.178-48.766 48.721a2.818 2.818 0 0 0 0 3.962c.08.076.17.115.248.153.101.131.152.295.28.405l46.164 46.174-48.734 48.727a2.799 2.799 0 0 0 0 3.961c.533.573 1.25.839 1.976.839zm75.627 0a2.77 2.77 0 0 0 1.983-.822l50.726-50.715a2.804 2.804 0 0 0 0-3.962l-46.72-46.718 48.765-48.769a2.8 2.8 0 0 0 0-3.961l-46.532-46.523 49.007-49.002a2.846 2.846 0 0 0 0-3.962l-46.732-46.72 48.769-48.766a2.814 2.814 0 0 0 0-3.962L259.517.821c-1.094-1.095-2.883-1.095-3.961 0a2.802 2.802 0 0 0 0 3.961l46.155 46.165-48.728 48.736a2.8 2.8 0 0 0 0 3.961c.079.08.159.107.263.17.109.134.139.285.265.402l46.173 46.172-48.746 48.736c-.69.695-.876 1.653-.71 2.545a2.769 2.769 0 0 0 .818 2.041l46.173 46.183-48.742 48.723c-1.083 1.096-1.083 2.879 0 3.963.075.087.164.114.249.164.102.131.134.284.274.405l46.173 46.161-48.731 48.728c-1.097 1.095-1.097 2.884 0 3.962a2.615 2.615 0 0 0 1.967.852z" fill="rgba(50, 17, 78, 1)"></path></svg>
+    
+    <svg class="circle" height='150' width='150'>
+            <defs>
+                <linearGradient id='grad1' x1='0%' y1='0%' x2='100%' y2='0%'>
+                <stop offset='0%' style='stop-color:#d7ceff;stop-opacity:1' />
+                <stop offset='100%'' style='stop-color:#32114e;stop-opacity:1' />
+            </linearGradient>
+            </defs>
+            <circle cx='75' cy='75' r="50" fill='url(#grad1)' />
+    </svg>
+    
+    <button onclick="topFunction()" id="myBtn2" title="Go to top"><svg fill="#32114e" height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-79.2 -79.2 488.40 488.40" xml:space="preserve" stroke="#32114e" stroke-width="13.86"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394 l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393 C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"></path> </g></svg></button>
+    
+    <svg class="blur" xmlns="http://www.w3.org/2000/svg" width="600px" height="600px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800">
+        <defs><filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feGaussianBlur stdDeviation="85" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur></filter></defs>
+        <g filter="url(#bbblurry-filter)"><ellipse rx="150" ry="150" cx="527.7830515322285" cy="430.7446520032775" fill="#32114eff"></ellipse>
+            <ellipse rx="150" ry="150" cx="239.927334860402" cy="633.2748767914402" fill="#d7ceffff"></ellipse>
+            <ellipse rx="150" ry="150" cx="376.7919264822126" cy="419.5485915664871" fill="hsla(272, 16%, 80%, 1.00)"></ellipse></g>
+    </svg>
+    <svg class="blur2" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px"  version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" opacity="1"><defs><filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feGaussianBlur stdDeviation="10" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur></filter></defs><g filter="url(#bbblurry-filter)"><ellipse rx="150" ry="150" cx="262.42383819100746" cy="299.44071776704635" fill="#5f3a82"></ellipse><ellipse rx="150" ry="150" cx="525.2365072360213" cy="447.1770110604651" fill="#d7ceff"></ellipse><ellipse rx="150" ry="150" cx="283.48585390420476" cy="588.7527235740142" fill="#d2d2d2"></ellipse></g></svg>
+    
+
+        <svg class="dot" xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="none" viewBox="0 0 24 24" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs"><path fill="#32114e" stroke=" #32114e" fill-opacity="0" stroke-width="0.5" stroke-opacity="0.8" fill-rule="evenodd" d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" clip-rule="evenodd"></path></svg>
+
+    <div id="compose-view">
+        <h3>New Email</h3>
+        <form id="compose-form">
+            <div class="form-group">
+                <span class="form-text">From: </span>
+                <input disabled class="form-control" value="{{ request.user.email }}">
+            </div>
+            <div class="form-group">
+                <span class="form-text">To: </span>
+                <input id="compose-recipients" class="form-control" placeholder="example@example.com">
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="compose-subject" placeholder="Subject">
+            </div>
+            <textarea class="form-control" id="compose-body" placeholder="Body" rows="9"></textarea>
+            <input type="submit" class="btn-primary"/>
+        </form>
+        
+    </div>
+    
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'mail/inbox1.js' %}"></script>
+    <script src="{% static 'mail/scroll.js' %}"></script>
+{% endblock %}

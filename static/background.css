@@ -1,0 +1,84 @@
+.blur {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.blur2 {
+  position: fixed;
+  left: 0;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+.zig {
+  position: fixed;
+  top: 30px;
+  left: 20px;
+  z-index: -1;
+}
+
+.circle {
+  position: fixed;
+  top: 10px;
+  left: 60px;
+  z-index: -3;
+  filter: blur(3px);
+}
+
+.dot {
+  position: fixed;
+  bottom: 30px;
+  left: 100px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 768px) and (min-width: 200px) {
+  .dot {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    left: 100px;
+    z-index: -1;
+  }
+  .zig {
+    display: none;
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    z-index: -1;
+  }
+  .circle {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 60px;
+    z-index: -3;
+    filter: blur(3px);
+  }
+}
+@media screen and (max-width: 1690px) and (min-width: 768px) {
+  .zig {
+    opacity: 0.3;
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    z-index: -1;
+  }
+  .circle {
+    opacity: 0.3;
+    position: fixed;
+    top: 10px;
+    left: 60px;
+    z-index: -3;
+    filter: blur(3px);
+  }
+  .dot {
+    opacity: 0.3;
+    position: fixed;
+    bottom: 30px;
+    left: 100px;
+    z-index: -1;
+  }
+}/*# sourceMappingURL=background.css.map */

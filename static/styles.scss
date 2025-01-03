@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+:root {
+    --primaryColor: #32114e;
+    --secondaryColor: #d7ceff;
+    --mainWhite: rgb(251, 247, 255);
+    --mainBlack: #222;
+    --mainGrey: #7c7c7c;
+    --lighterGray:rgb(210, 210, 210);
+    --mainPurple: #5f3a82;
+    --bodyColor: #edebfc;
+}
+
+
+
+
+body {
+    background-color: var(--bodyColor);
+
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.email {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 1px solid var(--lighterGray);
+    border-radius: 0.3rem;
+    background-color: var(--mainWhite);
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    letter-spacing: 0.01rem;
+}
+.email:hover{
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--mainPurple);
+}
+
+
+
+
+.email > * {
+    flex: 1 2 300px;
+}
+
+
+.btn {    
+    font-family: 'Balsamiq Sans', cursive;
+    position: relative; 
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--primaryColor);
+    color: var(--primaryColor);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);  
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn:before, .btn:after {
+    content: '';
+    position: absolute; 
+    transition: inherit;
+    z-index: -1;
+}
+
+.btn:hover {
+    color: var(--bodyColor);
+    transition-delay: .5s;
+}
+
+.btn:hover:before {
+    transition-delay: 0s;
+}
+
+.btn:hover:after {
+    background: var(--mainPurple);
+    transition-delay: .35s;
+}
+
+
+.from-top:before, 
+.from-top:after {
+    left: 0;
+    height: 0;
+    width: 100%;
+}
+
+.from-top::before {
+    bottom: 0;  
+    border: 1px solid var(--mainPurple);
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.from-top:after {
+    top: 0;
+    height: 0;
+}
+
+.from-top:hover:before,
+.from-top:hover:after {
+    height: 100%;
+}
+
+
+
+.btn-primary,
+.btn-email{
+    box-shadow: 0 -3px 5px -3px var(--mainPurple), 0 3px 5px -3px var(--mainPurple);
+    border: 1px solid var(--primaryColor);
+    color: var(--mainWhite);
+    border-radius: 0.3rem;
+    background-color: var(--mainPurple) !important;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.btn-primary:hover,
+.btn-email:hover{
+    background-color: var(--mainWhite) !important;
+    border: 1px solid var(--primaryColor);
+    color:var(--primaryColor);
+}
+
+h2{
+    color: var(--mainPurple);
+    font-weight: 500;
+    font-size: 2.3rem;
+    margin: 20px 0;
+}
+h3{
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: var(--primaryColor);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    margin: 30px 10px;
+}
+.form-group{
+    font-size: 1.2rem !important;
+}
+a{
+    color: var(--mainPurple);
+}
+a:hover{
+    color: var(--primaryColor);
+}
